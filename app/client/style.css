@@ -1,0 +1,25 @@
+.landing-background {
+  background: url('images/Landing.jpg') no-repeat center fixed;
+  background-size: cover;
+  height: 915px;
+  border: none;
+}
+
+.landing-header {
+  color: white;
+  font-size: 60px;
+  padding-top: 100px;
+}
+
+.landing-body {
+  color: white;
+  font-size: 20px;
+}
+
+.login {
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
+  padding-top: 50px;
+  padding-right: 200px
+}
