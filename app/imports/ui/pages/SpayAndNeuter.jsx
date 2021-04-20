@@ -1,6 +1,5 @@
 import React from 'react';
-import { Dropdown, Grid, Icon, Menu } from 'semantic-ui-react';
-import { NavLink } from 'react-router-dom';
+import { Menu, Grid, Button, Link } from 'semantic-ui-react';
 
 class SpayAndNeuter extends React.Component {
   render() {
@@ -10,9 +9,14 @@ class SpayAndNeuter extends React.Component {
         <Grid id='landing-page' verticalAlign='middle' textAlign='center' container>
 
           <Grid.Column width={50}>
-            <h1><div className='landing-header'>Meow Mapper<Icon name='paw'/></div></h1>
+            <h1><div className='landing-header'>Spay and Neuter</div></h1>
 
-            <p><div className='landing-body'>UH Manoa Cat Map! Come map a cat and find out where others have spotted a cat</div></p>
+            <p><div className='landing-body'>Want to neuter a cat? Schedule an appointment at the
+              Hawaiian Humane Society Spay Neuter Center, call 356-2255 or click the button below.
+              To be eligible for sterialization, kittens must be at least 2 pounds and 8 weeks of age.</div></p>
+            <Menu.Item href="https://hawaiianhumane.org/feline-fix/">
+              <Button size='massive' inverted>Make an appointment</Button>
+            </Menu.Item>
           </Grid.Column>
 
         </Grid>
