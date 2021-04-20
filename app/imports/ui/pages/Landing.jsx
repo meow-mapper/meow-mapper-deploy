@@ -7,16 +7,6 @@ class Landing extends React.Component {
   render() {
     return (
       <div className='landing-background'>
-        <Menu inverted borderless className='login'>
-          <Menu.Item position='right'>
-            <Dropdown id="login-dropdown" text="Login">
-              <Dropdown.Menu>
-                <Dropdown.Item id="login-dropdown-sign-in" icon="user" text="Sign In" as={NavLink} exact to="/signin"/>
-                <Dropdown.Item id="login-dropdown-sign-up" icon="add user" text="Sign Up" as={NavLink} exact to="/signup"/>
-              </Dropdown.Menu>
-            </Dropdown>
-          </Menu.Item>
-        </Menu>
         <Grid id='landing-page' verticalAlign='middle' textAlign='center' container>
 
           <Grid.Column width={50}>

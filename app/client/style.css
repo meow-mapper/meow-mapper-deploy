@@ -16,10 +16,14 @@
   font-size: 20px;
 }
 
-.login {
-  border: none !important;
-  box-shadow: none !important;
-  background: none !important;
-  padding-top: 50px;
-  padding-right: 200px
+.spay-background {
+  background: url('images/spayneuter.png') no-repeat center fixed;
+  background-size: cover;
+  height: 967px;
+  border: none;
+}
+
+.ui.borderless.topmenu.menu {
+  box-shadow: none;
+  background: url('images/Landing.jpg') no-repeat center fixed;;
 }
