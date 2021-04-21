@@ -27,3 +27,20 @@
   box-shadow: none;
   background: url('images/Landing.jpg') no-repeat center fixed;;
 }
+.catmap-grid{
+  padding-top: 20px;
+}
+.most-liked-cat{
+  padding: 100px 0 0 100px;
+}
+.cat-snaps{
+  color: white;
+  font-size: 60px;
+  padding-bottom: 20px;
+}
+.cat-snaps-likes{
+  color: red;
+}
+.cat-snaps-text{
+  color: white;
+}
