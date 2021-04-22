@@ -1,7 +1,7 @@
 .landing-background {
   background: url('images/Landing.jpg') no-repeat center fixed;
   background-size: cover;
-  height: 967px;
+  height: 925px;
   border: none;
 }
 
@@ -19,7 +19,7 @@
 .spay-background {
   background: url('images/spayneuter.png') no-repeat center fixed;
   background-size: cover;
-  height: 967px;
+  height: 925px;
   border: none;
 }
 
