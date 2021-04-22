@@ -23,7 +23,14 @@
   border: none;
 }
 
+.donations-background {
+  background: url('images/donations-page-background.jpg') no-repeat center fixed;
+  background-size: cover;
+  height: 950px;
+  border: none;
+}
+
 .ui.borderless.topmenu.menu {
   box-shadow: none;
-  background: url('images/Landing.jpg') no-repeat center fixed;;
+  background: url('images/Landing.jpg') no-repeat center fixed;
 }
