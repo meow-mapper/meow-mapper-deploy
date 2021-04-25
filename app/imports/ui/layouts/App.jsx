@@ -13,6 +13,7 @@ import Signout from '../pages/Signout';
 import SpayAndNeuter from '../pages/SpayAndNeuter';
 import SnatchACat from '../pages/SnatchACat';
 import MapACat from '../pages/MapACat';
+import Donations from '../pages/Donations';
 import NavBar from '../components/NavBar';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
@@ -30,6 +31,7 @@ class App extends React.Component {
             <ProtectedRoute path="/spayandneuter" component={SpayAndNeuter}/>
             <ProtectedRoute path="/snatchacat" component={SnatchACat}/>
             <ProtectedRoute path="/mapacat" component={MapACat}/>
+            <ProtectedRoute path="/donations" component={Donations}/>
             <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
             <Route component={NotFound}/>
           </Switch>

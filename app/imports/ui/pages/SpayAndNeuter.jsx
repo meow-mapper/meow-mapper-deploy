@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, Grid, Button, Link } from 'semantic-ui-react';
+import { Menu, Grid, Button } from 'semantic-ui-react';
 
 class SpayAndNeuter extends React.Component {
   render() {
