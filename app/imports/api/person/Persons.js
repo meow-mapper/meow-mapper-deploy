@@ -5,18 +5,18 @@ import { Tracker } from 'meteor/tracker';
 /**
  * The AdoptsCollection. It encapsulates state and variable values for Adopt.
  */
-class AdoptsCollection {
+class PersonsCollection {
   constructor() {
     // The name of this collection.
-    this.name = 'AdoptsCollection';
+    this.name = 'PersonsCollection';
     // Define the Mongo collection.
     this.collection = new Mongo.Collection(this.name);
     // Define the structure of each document in the collection.
     this.schema = new SimpleSchema({
-      name: String,
-      gender: String,
-      image: String,
-      description: String,
+      firstName: String,
+      lastName: String,
+      mail: String,
+      catName: String,
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
     this.collection.attachSchema(this.schema);
@@ -30,4 +30,4 @@ class AdoptsCollection {
  * The singleton instance of the AdoptsCollection.
  * @type {AdoptsCollection}
  */
-export const Adopts = new AdoptsCollection();
+export const Persons = new PersonsCollection();

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Card, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class Adopt extends React.Component {
@@ -21,7 +21,7 @@ class Adopt extends React.Component {
         </Card.Content>
         <Card.Content extra>
           <div className='ui two buttons'>
-            <Button>
+            <Button as={NavLink} activeClassName="active" exact to="/AdoptForm">
               Adopt
             </Button>
           </div>
@@ -34,7 +34,6 @@ class Adopt extends React.Component {
 // Require a document to be passed to this component.
 Adopt.propTypes = {
   adopt: PropTypes.object.isRequired,
-  notes: PropTypes.array.isRequired,
 };
 
 // Wrap this component in withRouter since we use the <Link> React Router element.

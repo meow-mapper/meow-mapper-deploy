@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Card, Form, TextArea, Grid } from 'semantic-ui-react';
+import { Container, Header, Loader, Card } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import Adopt from '../components/Adopt';
@@ -25,7 +25,7 @@ class SnatchACat extends React.Component {
             <p></p>
           </Container>
           <Card.Group>
-            {this.props.adopts.map((adopt, index) => <Adopt key={index} adopt={adopt}/>)}
+            {this.adopts.map((adopt, index) => <Adopt key={index} adopt={adopt}/>)}
           </Card.Group>
         </Container>
       </div>
