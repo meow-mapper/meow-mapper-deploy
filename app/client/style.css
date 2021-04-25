@@ -16,6 +16,12 @@
   font-size: 20px;
 }
 
+.snatch-body {
+    color: white;
+    font-size: 20px;
+}
+
+
 .spay-background {
   background: url('images/spayneuter.png') no-repeat center fixed;
   background-size: cover;
@@ -30,8 +36,17 @@
   border: none;
 }
 
+.snatch-background {
+    background: url('images/snatch-background.png') no-repeat center fixed;
+    background-size: cover;
+    height: 950px;
+    border: none;
+}
+
+
 .ui.borderless.topmenu.menu {
   box-shadow: none;
+
   background: url('images/Landing.jpg') no-repeat center fixed;;
 }
 .catmap-grid{
@@ -52,4 +67,5 @@
 .cat-snaps-text{
   color: white;
 }
+
 
