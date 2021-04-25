@@ -37,18 +37,17 @@
 }
 
 .snatch-background {
-    background: url('images/snatch-background.png') no-repeat center fixed;
+    background: url('images/snatch2.png') no-repeat center fixed;
     background-size: cover;
-    height: 950px;
+    height: 1200px;
     border: none;
 }
 
 
 .ui.borderless.topmenu.menu {
-  box-shadow: none;
+    box-shadow: none;
+    background: url('images/Landing.jpg') no-repeat center fixed;}
 
-  background: url('images/Landing.jpg') no-repeat center fixed;;
-}
 .catmap-grid{
   padding-top: 20px;
 }
