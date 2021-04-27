@@ -12,7 +12,7 @@ import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import SpayAndNeuter from '../pages/SpayAndNeuter';
 import SnatchACat from '../pages/SnatchACat';
-import MapACat from '../pages/MapACat';
+import CatSnap from '../pages/CatSnap';
 import Donations from '../pages/Donations';
 import NavBar from '../components/NavBar';
 
@@ -30,7 +30,7 @@ class App extends React.Component {
             <Route path="/signout" component={Signout}/>
             <ProtectedRoute path="/spayandneuter" component={SpayAndNeuter}/>
             <ProtectedRoute path="/snatchacat" component={SnatchACat}/>
-            <ProtectedRoute path="/mapacat" component={MapACat}/>
+            <ProtectedRoute path="/catsnap" component={CatSnap}/>
             <ProtectedRoute path="/donations" component={Donations}/>
             <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
             <Route component={NotFound}/>
