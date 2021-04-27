@@ -1,4 +1,4 @@
-name: ci-meteor-application-template-react
+name: ci-meow-mapper-deploy
 
 on:
   push:
