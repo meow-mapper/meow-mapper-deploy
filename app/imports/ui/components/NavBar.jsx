@@ -17,14 +17,12 @@ class NavBar extends React.Component {
         {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
           <Menu.Item as={NavLink} activeClassName="active" exact to="/AdoptRequests" key='admin'>Adoption Requests</Menu.Item>
         ) : ''}
-        <Menu.Item>
-          {this.props.currentUser ? (
-            [<Menu.Item as={NavLink} activeClassName="active" exact to="/SpayAndNeuter" key=''>Spay and Neuter</Menu.Item>,
-              <Menu.Item as={NavLink} activeClassName="active" exact to="/SnatchACat" key=''>Snatch A Cat</Menu.Item>,
-              <Menu.Item as={NavLink} activeClassName="active" exact to="/CatSnap" key=''>Cat Snaps</Menu.Item>,
-              <Menu.Item as={NavLink} activeClassName="active" exact to="/Donations" key=''>Donations</Menu.Item>]
-          ) : ''}
-        </Menu.Item>
+        {this.props.currentUser ? (
+          [<Menu.Item as={NavLink} activeClassName="active" exact to="/SpayAndNeuter" key='san'>Spay and Neuter</Menu.Item>,
+            <Menu.Item as={NavLink} activeClassName="active" exact to="/SnatchACat" key='sac'>Snatch A Cat</Menu.Item>,
+            <Menu.Item as={NavLink} activeClassName="active" exact to="/CatSnap" key='cs'>Cat Snaps</Menu.Item>,
+            <Menu.Item as={NavLink} activeClassName="active" exact to="/Donations" key='d'>Donations</Menu.Item>]
+        ) : ''}
         <Menu.Item position="right">
           {this.props.currentUser === '' ? (
             <Dropdown id="login-dropdown" text="Login" pointing="top right" icon={'user'}>
