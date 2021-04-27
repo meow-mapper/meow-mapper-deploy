@@ -10,7 +10,7 @@ function addAdopt(data) {
 }
 
 function addPerson(data) {
-  console.log(`  Adding: ${data.lastName} (${data.mail})`);
+  console.log(`  Adding: ${data.lastName} (${data.email})`);
   Persons.collection.insert(data);
 }
 

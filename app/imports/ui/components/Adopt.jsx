@@ -34,6 +34,7 @@ class Adopt extends React.Component {
 // Require a document to be passed to this component.
 Adopt.propTypes = {
   adopt: PropTypes.object.isRequired,
+  notes: PropTypes.array.isRequired,
 };
 
 // Wrap this component in withRouter since we use the <Link> React Router element.

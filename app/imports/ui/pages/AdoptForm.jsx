@@ -11,7 +11,7 @@ import { Persons } from '../../api/person/Persons';
 const formSchema = new SimpleSchema({
   firstName: String,
   lastName: String,
-  mail: String,
+  email: String,
   catName: String,
 });
 
@@ -22,8 +22,9 @@ class AdoptForm extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
-    const { firstName, lastName, mail, catName } = data;
-    Persons.collection.insert({ firstName, lastName, mail, catName },
+    const { firstName, lastName, email, catName } = data;
+    const owner = Meteor.user().username;
+    Persons.collection.insert({ firstName, lastName, email, catName, owner },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -43,10 +44,10 @@ class AdoptForm extends React.Component {
           <Header as="h2" textAlign="center">Adoption Request</Header>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
             <Segment>
-              <TextField name='First Name'/>
-              <TextField name='Last Name'/>
-              <TextField name='UH Email'/>
-              <TextField name='Cat Name'/>
+              <TextField name='firstName'/>
+              <TextField name='lastName'/>
+              <TextField name='email'/>
+              <TextField name='catName'/>
               <SubmitField value='Submit'/>
               <ErrorsField/>
             </Segment>

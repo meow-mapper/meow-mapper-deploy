@@ -10,7 +10,7 @@ class Person extends React.Component {
       <Table.Row>
         <Table.Cell>{this.props.person.firstName}</Table.Cell>
         <Table.Cell>{this.props.person.lastName}</Table.Cell>
-        <Table.Cell>{this.props.person.mail}</Table.Cell>
+        <Table.Cell>{this.props.person.email}</Table.Cell>
         <Table.Cell>{this.props.person.catName}</Table.Cell>
       </Table.Row>
     );
@@ -22,7 +22,7 @@ Person.propTypes = {
   person: PropTypes.shape({
     firstName: PropTypes.string,
     lastName: PropTypes.string,
-    mail: PropTypes.string,
+    email: PropTypes.string,
     catName: PropTypes.string,
   }).isRequired,
 };

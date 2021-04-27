@@ -25,7 +25,7 @@ class SnatchACat extends React.Component {
             <p></p>
           </Container>
           <Card.Group>
-            {this.adopts.map((adopt, index) => <Adopt key={index} adopt={adopt}/>)}
+            {this.props.adopts.map((adopt, index) => <Adopt key={index} adopt={adopt}/>)}
           </Card.Group>
         </Container>
       </div>
@@ -43,8 +43,9 @@ SnatchACat.propTypes = {
 export default withTracker(() => {
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe(Adopts.userPublicationName);
+  const subscription2 = Meteor.subscribe(Adopts.adminPublicationName);
   return {
     adopts: Adopts.collection.find({}).fetch(),
-    ready: subscription.ready(),
+    ready: subscription.ready() && subscription2.ready(),
   };
 })(SnatchACat);

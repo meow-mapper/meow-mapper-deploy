@@ -5,7 +5,6 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import Person from '../components/Person';
 import { Persons } from '../../api/person/Persons';
-import { Stuffs } from '../../api/stuff/Stuff';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class AdoptRequests extends React.Component {

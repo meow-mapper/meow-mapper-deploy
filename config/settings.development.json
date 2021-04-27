@@ -32,6 +32,6 @@
   ],
 
   "defaultPersons": [
-    {"firstName":  "Kha", "lastName": "Bui", "mail": "kbui@hawaii.edu", "catName": "Jennifurr"}
+    {"firstName":  "Kha", "lastName": "Bui", "email": "kbui@hawaii.edu", "catName": "Jennifurr"}
   ]
 }
