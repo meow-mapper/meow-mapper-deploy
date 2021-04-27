@@ -3,36 +3,35 @@
     { "email": "admin@foo.com", "password": "changeme", "role": "admin" },
     { "email": "john@foo.com", "password": "changeme" }
   ],
+
   "defaultAdopts": [
     {"name": "Batman",
     "gender": "Male",
     "image": "https://www.catster.com/wp-content/uploads/2017/11/Tabby-cat-opener.jpg",
-    "description": "A white and tabby with orange eyes who will take time to warm up to you",
-      "owner": "john@foo.com"},
+    "description": "A white and tabby with orange eyes who will take time to warm up to you"},
     {"name": "Clawzilla",
       "gender": "Female",
       "image": "https://image.freepik.com/free-photo/cat-with-brown-fur-green-eyes_180034-79.jpg",
-      "description": "A white and tabby with green eyes who's no stranger to children",
-      "owner": "john@foo.com"},
+      "description": "A white and tabby with green eyes who's no stranger to children"},
     {"name": "Jennifurr",
       "gender": "Female",
       "image": "https://catcode.com/catpics/0861_newcat.jpg",
-      "description": "A white and gray cat with fur for days",
-      "owner": "john@foo.com"},
+      "description": "A white and gray cat with fur for days"},
     {"name": "Breakfast Purrito",
       "gender": "Male",
       "image": "https://image.freepik.com/free-photo/portrait-gray-cat-with-green-eyes_127220-53.jpg",
-      "description": "A black and gray ladies' man with green eyes",
-      "owner": "john@foo.com"},
+      "description": "A black and gray ladies' man with green eyes"},
     {"name": "Frank",
       "gender": "Male",
       "image": "https://c.files.bbci.co.uk/12A9B/production/_111434467_gettyimages-1143489763.jpg",
-      "description": "A tabby boy with a heart as big as his green eyes",
-      "owner": "john@foo.com"},
+      "description": "A tabby boy with a heart as big as his green eyes"},
     {"name": "Sarah",
       "gender": "Female",
       "image": "https://www.fccnn.com/lifestyle/pets/6979845-2be6ol-jea-0002-Feral-Cats-2.jpg/alternates/BASE_LANDSCAPE/jea%200002%20Feral%20Cats%20%282%29.jpg",
-      "description": "A gorgeous cream cat with a partially gray face whose favorite hobby is looking at you disdainfully with her pretty blue eyes",
-      "owner": "john@foo.com"}
+      "description": "A gorgeous cream cat with a partially gray face whose favorite hobby is looking at you disdainfully with her pretty blue eyes"}
+  ],
+
+  "defaultPersons": [
+    {"firstName":  "Kha", "lastName": "Bui", "email": "kbui@hawaii.edu", "catName": "Jennifurr"}
   ]
 }

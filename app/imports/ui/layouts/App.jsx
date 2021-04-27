@@ -5,16 +5,18 @@ import 'semantic-ui-css/semantic.css';
 import { Roles } from 'meteor/alanning:roles';
 import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import Landing from '../pages/Landing';
-import ListStuffAdmin from '../pages/ListStuffAdmin';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
-import SpayAndNeuter from '../pages/SpayAndNeuter';
-import SnatchACat from '../pages/SnatchACat';
 import MapACat from '../pages/MapACat';
+import SnatchACat from '../pages/SnatchACat';
+import SpayAndNeuter from '../pages/SpayAndNeuter';
 import Donations from '../pages/Donations';
 import NavBar from '../components/NavBar';
+import AdoptForm from '../pages/AdoptForm';
+import EditForm from '../pages/EditForm';
+import AdoptRequests from '../pages/AdoptRequests';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -28,11 +30,13 @@ class App extends React.Component {
             <Route path="/signin" component={Signin}/>
             <Route path="/signup" component={Signup}/>
             <Route path="/signout" component={Signout}/>
-            <ProtectedRoute path="/spayandneuter" component={SpayAndNeuter}/>
             <ProtectedRoute path="/snatchacat" component={SnatchACat}/>
             <ProtectedRoute path="/mapacat" component={MapACat}/>
+            <ProtectedRoute path="/spayandneuter" component={SpayAndNeuter}/>
             <ProtectedRoute path="/donations" component={Donations}/>
-            <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
+            <ProtectedRoute path="/adoptform" component={AdoptForm}/>
+            <AdminProtectedRoute path="/edit/:_id" component={EditForm}/>
+            <AdminProtectedRoute path="/adoptrequests" component={AdoptRequests}/>
             <Route component={NotFound}/>
           </Switch>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Card, Form, TextArea, Grid } from 'semantic-ui-react';
+import { Container, Header, Loader, Card } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import Adopt from '../components/Adopt';
@@ -43,8 +43,9 @@ SnatchACat.propTypes = {
 export default withTracker(() => {
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe(Adopts.userPublicationName);
+  const subscription2 = Meteor.subscribe(Adopts.adminPublicationName);
   return {
     adopts: Adopts.collection.find({}).fetch(),
-    ready: subscription.ready(),
+    ready: subscription.ready() && subscription2.ready(),
   };
 })(SnatchACat);
