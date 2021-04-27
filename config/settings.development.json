@@ -33,5 +33,21 @@
 
   "defaultPersons": [
     {"firstName":  "Kha", "lastName": "Bui", "email": "kbui@hawaii.edu", "catName": "Jennifurr"}
-  ]
+  ],
+  "defaultSnaps":  [{
+    "image": "/images/cat2.jpg", "submittedBy": "Nhan Bui", "caption": "This cat loves flowers!", "locatedNear": "Krauss Hall", "submittedOn": "April 15, 2021"
+},
+  {
+    "image": "/images/cat3.jpg", "submittedBy": "Germaine Juan", "caption": "A very timid cat.", "locatedNear": "Sakamaki Hall", "submittedOn": "April 15, 2021"
+  },
+  {
+    "image": "/images/cat1.jpg", "submittedBy": "Maegan Chow", "caption": "A possible mother of 12 :).", "locatedNear": "the dorms", "submittedOn": "April 15, 2021"
+  },
+  {
+    "image": "/images/cat4.jpg", "submittedBy": "Kha Bui", "caption": "She is a ball of fluff!", "locatedNear": "Sinclair Library", "submittedOn": "April 15, 2021"
+  },
+  {
+    "image": "/images/cat5.jpg", "submittedBy": "Kha Bui", "caption": "A possible father of 12 :o.", "locatedNear": "QLC", "submittedOn": "April 15, 2021"
+  }
+]
 }

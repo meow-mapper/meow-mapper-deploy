@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
 import { Adopts } from '../../api/adopt/Adopts';
 import { Persons } from '../../api/person/Persons';
+import { Snaps } from '../../api/snap/Snaps';
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise publish nothing.
@@ -30,12 +31,28 @@ Meteor.publish(Persons.userPublicationName, function () {
   return this.ready();
 });
 
+// User-level publication.
+// If logged in, then publish documents owned by this user. Otherwise publish nothing.
+Meteor.publish(Snaps.userPublicationName, function () {
+  if (this.userId) {
+    return Snaps.collection.find();
+  }
+  return this.ready();
+});
+
 // Admin-level publication.
 // If logged in and with admin role, then publish all documents from all users. Otherwise publish nothing.
 
 Meteor.publish(Persons.adminPublicationName, function () {
   if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
     return Persons.collection.find();
+  }
+  return this.ready();
+});
+
+Meteor.publish(Snaps.adminPublicationName, function () {
+  if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
+    return Snaps.collection.find();
   }
   return this.ready();
 });

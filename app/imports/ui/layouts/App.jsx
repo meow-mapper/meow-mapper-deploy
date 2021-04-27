@@ -9,9 +9,9 @@ import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
-import MapACat from '../pages/MapACat';
-import SnatchACat from '../pages/SnatchACat';
 import SpayAndNeuter from '../pages/SpayAndNeuter';
+import SnatchACat from '../pages/SnatchACat';
+import CatSnap from '../pages/CatSnap';
 import Donations from '../pages/Donations';
 import NavBar from '../components/NavBar';
 import AdoptForm from '../pages/AdoptForm';
@@ -31,8 +31,8 @@ class App extends React.Component {
             <Route path="/signup" component={Signup}/>
             <Route path="/signout" component={Signout}/>
             <ProtectedRoute path="/snatchacat" component={SnatchACat}/>
-            <ProtectedRoute path="/mapacat" component={MapACat}/>
             <ProtectedRoute path="/spayandneuter" component={SpayAndNeuter}/>
+            <ProtectedRoute path="/catsnap" component={CatSnap}/>
             <ProtectedRoute path="/donations" component={Donations}/>
             <ProtectedRoute path="/adoptform" component={AdoptForm}/>
             <AdminProtectedRoute path="/edit/:_id" component={EditForm}/>
