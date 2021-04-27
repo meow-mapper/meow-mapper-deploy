@@ -15,6 +15,7 @@ import SpayAndNeuter from '../pages/SpayAndNeuter';
 import Donations from '../pages/Donations';
 import NavBar from '../components/NavBar';
 import AdoptForm from '../pages/AdoptForm';
+import EditForm from '../pages/EditForm';
 import AdoptRequests from '../pages/AdoptRequests';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
@@ -34,6 +35,7 @@ class App extends React.Component {
             <ProtectedRoute path="/spayandneuter" component={SpayAndNeuter}/>
             <ProtectedRoute path="/donations" component={Donations}/>
             <ProtectedRoute path="/adoptform" component={AdoptForm}/>
+            <AdminProtectedRoute path="/edit/:_id" component={EditForm}/>
             <AdminProtectedRoute path="/adoptrequests" component={AdoptRequests}/>
             <Route component={NotFound}/>
           </Switch>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Table } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 /** Renders a single row in the List person table. See pages/Listperson.jsx. */
 class Person extends React.Component {
@@ -12,6 +12,9 @@ class Person extends React.Component {
         <Table.Cell>{this.props.person.lastName}</Table.Cell>
         <Table.Cell>{this.props.person.email}</Table.Cell>
         <Table.Cell>{this.props.person.catName}</Table.Cell>
+        <Table.Cell>
+          <Link to={`/edit/${this.props.person._id}`}>Edit</Link>
+        </Table.Cell>
       </Table.Row>
     );
   }
@@ -24,6 +27,7 @@ Person.propTypes = {
     lastName: PropTypes.string,
     email: PropTypes.string,
     catName: PropTypes.string,
+    _id: PropTypes.string,
   }).isRequired,
 };
 
