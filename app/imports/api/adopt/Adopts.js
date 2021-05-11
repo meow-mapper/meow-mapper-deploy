@@ -14,7 +14,11 @@ class AdoptsCollection {
     // Define the structure of each document in the collection.
     this.schema = new SimpleSchema({
       name: String,
-      gender: String,
+      gender: {
+        type: String,
+        allowedValues: ['Male', 'Female', 'Unidentified'],
+        defaultValue: 'Unidentified',
+      },
       image: String,
       description: String,
     }, { tracker: Tracker });

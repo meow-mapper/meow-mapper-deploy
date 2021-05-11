@@ -18,6 +18,9 @@ class Snap extends React.Component {
             {this.props.snap.caption}
           </Card.Description>
         </Card.Content>
+        <Card.Content extra>
+          {this.props.snap.locatedNear}
+        </Card.Content>
       </Card>
     );
   }

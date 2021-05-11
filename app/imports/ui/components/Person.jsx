@@ -12,6 +12,7 @@ class Person extends React.Component {
         <Table.Cell>{this.props.person.lastName}</Table.Cell>
         <Table.Cell>{this.props.person.email}</Table.Cell>
         <Table.Cell>{this.props.person.catName}</Table.Cell>
+        <Table.Cell>{this.props.person.approval}</Table.Cell>
         <Table.Cell>
           <Link to={`/edit/${this.props.person._id}`}>Edit</Link>
         </Table.Cell>
@@ -22,13 +23,7 @@ class Person extends React.Component {
 
 // Require a document to be passed to this component.
 Person.propTypes = {
-  person: PropTypes.shape({
-    firstName: PropTypes.string,
-    lastName: PropTypes.string,
-    email: PropTypes.string,
-    catName: PropTypes.string,
-    _id: PropTypes.string,
-  }).isRequired,
+  person: PropTypes.object.isRequired,
 };
 
 // Wrap this component in withRouter since we use the <Link> React Router element.

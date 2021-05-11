@@ -32,8 +32,11 @@
   ],
 
   "defaultPersons": [
-    {"firstName":  "Kha", "lastName": "Bui", "email": "kbui@hawaii.edu", "catName": "Jennifurr"}
+    {"firstName":  "John", "lastName": "Foo", "email": "john@foo.com", "catName": "Jennifurr", "approval": "Pending Approval" },
+    {"firstName":  "John", "lastName": "Foo", "email": "john@foo.com", "catName": "Batman", "approval": "Pending Approval" },
+    {"firstName":  "Admin", "lastName": "Foo", "email": "admin@foo.com", "catName": "Clawzilla", "approval": "Pending Approval" }
   ],
+
   "defaultSnaps":  [{
     "image": "/images/cat2.jpg", "submittedBy": "Nhan Bui", "caption": "This cat loves flowers!", "locatedNear": "Krauss Hall", "submittedOn": "April 15, 2021"
 },

@@ -17,6 +17,8 @@ import NavBar from '../components/NavBar';
 import AdoptForm from '../pages/AdoptForm';
 import EditForm from '../pages/EditForm';
 import AdoptRequests from '../pages/AdoptRequests';
+import AddSnatch from '../pages/AddSnatch';
+import AddSnap from '../pages/AddSnap';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -35,8 +37,10 @@ class App extends React.Component {
             <ProtectedRoute path="/catsnap" component={CatSnap}/>
             <ProtectedRoute path="/donations" component={Donations}/>
             <ProtectedRoute path="/adoptform" component={AdoptForm}/>
-            <AdminProtectedRoute path="/edit/:_id" component={EditForm}/>
+            <ProtectedRoute path="/addsnatch" component={AddSnatch}/>
+            <ProtectedRoute path="/addsnap" component={AddSnap}/>
             <AdminProtectedRoute path="/adoptrequests" component={AdoptRequests}/>
+            <AdminProtectedRoute path="/edit/:_id" component={EditForm}/>
             <Route component={NotFound}/>
           </Switch>
         </div>

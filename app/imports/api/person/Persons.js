@@ -17,6 +17,11 @@ class PersonsCollection {
       lastName: String,
       email: String,
       catName: String,
+      approval: {
+        type: String,
+        allowedValues: ['Approved', 'Pending Approval', 'Denied'],
+        defaultValue: 'Pending Approval',
+      },
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
     this.collection.attachSchema(this.schema);

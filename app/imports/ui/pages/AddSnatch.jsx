@@ -1,35 +1,39 @@
 import React from 'react';
 import { Grid, Segment, Header } from 'semantic-ui-react';
-import { AutoForm, ErrorsField, SubmitField, TextField } from 'uniforms-semantic';
+import { AutoForm, ErrorsField, SubmitField, TextField, SelectField, LongTextField } from 'uniforms-semantic';
 import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
-import { Persons } from '../../api/person/Persons';
+import { Adopts } from '../../api/adopt/Adopts';
 
 // Create a schema to specify the structure of the data to appear in the form.
 const formSchema = new SimpleSchema({
-  firstName: String,
-  lastName: String,
-  email: String,
-  catName: String,
+  name: String,
+  gender: {
+    type: String,
+    allowedValues: ['Male', 'Female', 'Unidentified'],
+    defaultValue: 'Unidentified',
+  },
+  image: String,
+  description: String,
 });
 
 const bridge = new SimpleSchema2Bridge(formSchema);
 
 /** Renders the Page for adding a document. */
-class AdoptForm extends React.Component {
+class AddSnatch extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
-    const { firstName, lastName, email, catName } = data;
+    const { name, gender, image, description } = data;
     const owner = Meteor.user().username;
-    Persons.collection.insert({ firstName, lastName, email, catName, owner },
+    Adopts.collection.insert({ name, gender, image, description, owner },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
         } else {
-          swal('Success', 'We will contact you as soon as possible with your request!', 'success');
+          swal('Success', 'New Cat Added', 'success');
           formRef.reset();
         }
       });
@@ -41,13 +45,13 @@ class AdoptForm extends React.Component {
     return (
       <Grid container centered>
         <Grid.Column>
-          <Header as="h2" textAlign="center" inverted>Adoption Request</Header>
+          <Header as="h2" textAlign="center" inverted>New Cat</Header>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
             <Segment>
-              <TextField name='firstName'/>
-              <TextField name='lastName'/>
-              <TextField name='email'/>
-              <TextField name='catName'/>
+              <TextField name='name'/>
+              <SelectField name='gender'/>
+              <TextField name='image'/>
+              <LongTextField name='description'/>
               <SubmitField value='Submit'/>
               <ErrorsField/>
             </Segment>
@@ -58,4 +62,4 @@ class AdoptForm extends React.Component {
   }
 }
 
-export default AdoptForm;
+export default AddSnatch;

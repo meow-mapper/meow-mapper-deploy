@@ -1,8 +1,10 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Card } from 'semantic-ui-react';
+import { Container, Header, Loader, Card, Menu, Button } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
+import { Roles } from 'meteor/alanning:roles';
 import Adopt from '../components/Adopt';
 import { Adopts } from '../../api/adopt/Adopts';
 
@@ -22,7 +24,9 @@ class SnatchACat extends React.Component {
           <Header as="h2" textAlign="center" inverted>Snatch a Cat</Header>
           <Container>
             <p><div className='snatch-body'> Made a special furry friend on campus or just looking for some company on those long nights of studying? Our volunteers will help you catch your choice!</div></p>
-            <p></p>
+            {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
+              <Button as={NavLink} activeClassName="active" exact to="/AddSnatch" size='medium' inverted>Add a Cat</Button>
+            ) : ''}
           </Container>
           <Card.Group>
             {this.props.adopts.map((adopt, index) => <Adopt key={index} adopt={adopt}/>)}
