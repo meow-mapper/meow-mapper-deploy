@@ -36,6 +36,12 @@
     {"firstName":  "John", "lastName": "Foo", "email": "john@foo.com", "catName": "Batman", "approval": "Pending Approval" },
     {"firstName":  "Admin", "lastName": "Foo", "email": "admin@foo.com", "catName": "Clawzilla", "approval": "Pending Approval" }
   ],
+  "defaultVolunteers": [
+  {"firstName":  "Maegan", "lastName": "Chow", "email": "maegan@foo.com", "phoneNumber": "123-4567-8910", "status": "Denied" },
+    {"firstName":  "Nhan", "lastName": "Bui", "email": "nhan@foo.com", "phoneNumber": "123-4567-8910", "status": "Active" },
+    {"firstName":  "Germaine", "lastName": "Juan", "email": "germaine@foo.com", "phoneNumber": "123-4567-8910", "status": "Active" },
+    {"firstName":  "Kha", "lastName": "Bui", "email": "kha@foo.com", "phoneNumber": "123-4567-8910", "status": "Pending Review" }
+  ],
 
   "defaultSnaps":  [{
     "image": "/images/cat2.jpg", "submittedBy": "Nhan Bui", "caption": "This cat loves flowers!", "locatedNear": "Krauss Hall", "submittedOn": "April 15, 2021"

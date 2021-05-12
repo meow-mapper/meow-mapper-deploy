@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Adopts } from '../../api/adopt/Adopts';
 import { Persons } from '../../api/person/Persons';
+import { Volunteers } from '../../api/volunteer/Volunteers';
 import { Snaps } from '../../api/snap/Snaps';
 
 /* eslint-disable no-console */
@@ -15,6 +16,11 @@ function addPerson(data) {
   Persons.collection.insert(data);
 }
 
+function addVolunteer(data) {
+  console.log(`  Adding: ${data.lastName} (${data.email})`);
+  Volunteers.collection.insert(data);
+}
+
 if (Adopts.collection.find().count() === 0) {
   if (Meteor.settings.defaultAdopts) {
     console.log('Creating default data.');
@@ -26,6 +32,13 @@ if (Persons.collection.find().count() === 0) {
   if (Meteor.settings.defaultPersons) {
     console.log('Creating default data.');
     Meteor.settings.defaultPersons.map(data => addPerson(data));
+  }
+}
+
+if (Volunteers.collection.find().count() === 0) {
+  if (Meteor.settings.defaultVolunteers) {
+    console.log('Creating default data.');
+    Meteor.settings.defaultVolunteers.map(data => addVolunteer(data));
   }
 }
 

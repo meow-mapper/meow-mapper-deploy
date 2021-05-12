@@ -13,10 +13,14 @@ import SpayAndNeuter from '../pages/SpayAndNeuter';
 import SnatchACat from '../pages/SnatchACat';
 import CatSnap from '../pages/CatSnap';
 import Donations from '../pages/Donations';
+import Volunteers from '../pages/Volunteers';
 import NavBar from '../components/NavBar';
 import AdoptForm from '../pages/AdoptForm';
+import VolunteerForm from '../pages/VolunteerForm';
 import EditForm from '../pages/EditForm';
+import VolunteerEditForm from '../pages/VolunteerEditForm';
 import AdoptRequests from '../pages/AdoptRequests';
+import VolunteerRoster from '../pages/VolunteerRoster';
 import AddSnatch from '../pages/AddSnatch';
 import AddSnap from '../pages/AddSnap';
 
@@ -36,11 +40,15 @@ class App extends React.Component {
             <ProtectedRoute path="/spayandneuter" component={SpayAndNeuter}/>
             <ProtectedRoute path="/catsnap" component={CatSnap}/>
             <ProtectedRoute path="/donations" component={Donations}/>
+            <ProtectedRoute path="/volunteers" component={Volunteers}/>
             <ProtectedRoute path="/adoptform" component={AdoptForm}/>
+            <ProtectedRoute path="/volunteerform" component={VolunteerForm}/>
+            <ProtectedRoute path="/volunteerroster" component={VolunteerRoster}/>
             <ProtectedRoute path="/addsnatch" component={AddSnatch}/>
             <ProtectedRoute path="/addsnap" component={AddSnap}/>
             <AdminProtectedRoute path="/adoptrequests" component={AdoptRequests}/>
             <AdminProtectedRoute path="/edit/:_id" component={EditForm}/>
+            <AdminProtectedRoute path="/volunteer/edit/:_id" component={VolunteerEditForm}/>
             <Route component={NotFound}/>
           </Switch>
         </div>
