@@ -3,9 +3,9 @@ import { Meteor } from 'meteor/meteor';
 import { Container, Header, Loader, Card, Button } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 import Snap from '../components/Snap';
 import { Snaps } from '../../api/snap/Snaps';
-import { NavLink } from 'react-router-dom';
 
 /** Using ListStuff.jsx as template */
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */

@@ -44,7 +44,7 @@ class VolunteerRoster extends React.Component {
 
 // Require an array of Stuff documents in the props.
 VolunteerRoster.propTypes = {
-  volunteer: PropTypes.array.isRequired,
+  volunteers: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
