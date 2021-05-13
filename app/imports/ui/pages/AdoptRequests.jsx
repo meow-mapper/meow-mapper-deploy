@@ -20,7 +20,7 @@ class AdoptRequests extends React.Component {
       <div className='snatch-background'>
         <Container>
           <Container>
-            <Header as="h2" textAlign="center" inverted>Requests</Header>
+            <Header as="h2" textAlign="center" inverted>Adoption Requests</Header>
             <Table celled>
               <Table.Header>
                 <Table.Row>
